@@ -1,0 +1,45 @@
+{% extends 'base.html' %} <! uses the base page design >
+
+{% block title %}Coach{% endblock %}
+
+
+{% block main %}
+<br>
+<form class="myform" method="post">
+    <div class="form-group"> <! displays the opposition input >
+        <div class="form-label">Opposition:</div>
+        <div class="form-element"><input id="opposition" name="opposition" type="text" required></div>
+    </div>
+
+    <div class="form-group"> <! displays the Tries conceded input >
+        <div class="form-label">Tries Conceded:</div>
+        <div class="form-element"><input id="tries conceded" name="tries conceded" type="number" required></div>
+    </div>
+
+    <div class="form-group"> <! displays the Tries scored input >
+        <div class="form-label">Tries Scored:</div>
+        <div class="form-element"><input id="tries scored" name="tries scored" type="number" required></div>
+    </div>
+
+
+    <div class="form-group"> <! displays the Tackles made input >
+        <div class="form-label">Tackles Made:</div>
+        <div class="form-element"><input id="tackles made" name="tackles made" type="number" required></div>
+    </div>
+
+    <div class="form-group"> <! displays the Tackles missed input >
+        <div class="form-label">Tackles missed:</div>
+        <div class="form-element"><input id="tackles missed" name="tackles missed" type="number" required></div>
+    </div>
+
+    <div class="form-group"> <! displays the Turn overs made input >
+        <div class="form-label">Turn Overs Made:</div>
+        <div class="form-element"><input id="turnover" name="turnover" type="number" required></div>
+    </div>
+
+    <div class="button-group"> <! displays the submit and reset buttons >
+        <input type="submit" value="Post">
+        <input type="reset" value="Reset">
+    </div>
+</form>
+{% endblock %}

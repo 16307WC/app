@@ -1,0 +1,38 @@
+{% extends 'base.html' %} <! uses the base page design >
+{% block title %} Statistics {% endblock %}
+{% block main %}
+<div class="data">
+    <header><Br> <b><ul>Statistics</ul></b></header>
+    <br>
+    <table style="width:100%" border="1">
+            <thead>
+            <tr> <! displays the first line of the table >
+                <td style="width:20%">Opposition</td>
+                <td>Tries Conceded   </td>
+                <td>Tries Scored     </td>
+                <td>Tackles Made     </td>
+                <td>Tackles Missed   </td>
+                <td>Turnovers Made   </td>
+                </tr>
+            </thead>
+            <tbody>
+            {% for count in team_data %}
+            <tr><! displays each other line the table>
+                <td>{{ team_data[loop.index0][1] }}</td>
+                <td>{{ team_data[loop.index0][2] }}</td>
+                <td>{{ team_data[loop.index0][3] }}</td>
+                <td>{{ team_data[loop.index0][4] }}</td>
+                <td>{{ team_data[loop.index0][5] }}</td>
+                <td>{{ team_data[loop.index0][6] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+            {% if roll == "coach" %} <! checks if user is a coach and desplays the access link to post more data if they are >
+                <br>
+                <div class="button-group">
+                    <a href="/coach">Add New Data</a>
+                </div>
+            {% endif %}
+    </div>
+{% endblock %}

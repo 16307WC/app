@@ -1,0 +1,54 @@
+{% extends 'base.html' %} <! uses the base page design >
+
+{% block title %}Signup{% endblock %}
+
+{% block main %}
+<h1>Sign up</h1>
+<br>
+<form class="myform" method="post">
+    <div class="form-group"> <! displays the Firstname input >
+        <div class="form-label">First name:</div>
+        <div class="form-element"><input id="fname" name="fname" type="text" required></div>
+    </div>
+
+    <div class="form-group"> <! displays the Lastname input >
+        <div class="form-label">Last name:</div>
+        <div class="form-element"><input id="lname" name="lname" type="text" required></div>
+    </div>
+
+    <div class="form-group"> <! displays the Email input >
+        <div class="form-label">Email:</div>
+        <div class="form-element"><input id="email" name="email" type="email" required></div>
+    </div>
+
+    <div class="form-group"> <! displays the Password input >
+        <div class="form-label">Password:</div>
+        <div class="form-element"><input id="password" name="password" type="password" required></div>
+    </div>
+
+    <div class="form-group"> <! displays the Second password input >
+        <div class="form-label">Password (again):</div>
+        <div class="form-element"><input id="password2" name="password2" type="password" required></div>
+    </div>
+
+    <div class="form-group"> <! displays the Team name input >
+        <div class="form-label">Team Name:</div>
+        <div class="form-element"><input id="team" name="team" type="text" required></div>
+    </div>
+
+    <div class="form-group"> <! displays the Player type input >
+        <div class="form-label">&nbsp;<br>&nbsp;</br>&nbsp;</div>
+        <div class="form-element-radios">
+            <input type="radio" id="player" name="roll" value="player" checked>
+            <label for="player">Player</label>
+            <input type="radio" id="coach" name="roll" value="coach">
+            <label for="coach">Coach</label><br>
+        </div>
+    </div>
+
+    <div class="button-group"> <! displays the submit and reset buttons >
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </div>
+</form>
+{% endblock %}
